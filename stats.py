@@ -1,16 +1,15 @@
 def count_words(text):
-    word_count = len(text.split())
-    return word_count
+    return len(text.split())
 
 def count_characters(text):
     lower_text = text.lower()
-    character_count = {}
+    character_count_dict = {}
     for char in lower_text:
-        if char in character_count:
-            character_count[char] += 1
+        if char in character_count_dict:
+            character_count_dict[char] += 1
         else:
-            character_count[char] = 1
-    return character_count
+            character_count_dict[char] = 1
+    return character_count_dict
 
 def sorted_dict_list(dict):
     sorted_list = []
